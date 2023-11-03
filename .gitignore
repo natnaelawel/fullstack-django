@@ -1,0 +1,6 @@
+.env
+venv/
+db.sqlite3
+note.txt
+DS_Store
+__pycache__
