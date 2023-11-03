@@ -4,3 +4,5 @@ db.sqlite3
 note.txt
 DS_Store
 __pycache__
+
+**/*pycache__
