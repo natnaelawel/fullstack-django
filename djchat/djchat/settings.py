@@ -44,7 +44,8 @@ INSTALLED_APPS = [
 
     # External
     "drf_spectacular",
-
+    "rest_framework",
+    
     # Internal
     "account",
     "server",
@@ -140,6 +141,12 @@ AUTH_USER_MODEL = "account.Account"
 REST_FRAMEWORK = {
     # YOUR SETTINGS
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
 }
 
 SPECTACULAR_SETTINGS = {
